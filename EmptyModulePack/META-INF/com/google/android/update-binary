@@ -1,0 +1,68 @@
+#!/sbin/sh
+
+#################
+# Initialization
+#################
+
+umask 022
+
+# echo before loading util_functions
+ui_print() { echo "$1"; }
+
+require_new_magisk() {
+    ui_print "*******************************"
+    ui_print " Please install Magisk v23.0+! "
+    ui_print "*******************************"
+    exit 1
+}
+
+#########################
+# Load util_functions.sh
+#########################
+
+OUTFD=$2
+ZIPFILE=$3
+TMPDIR=/dev
+mount /data 2>/dev/null
+
+QE=/data/adb/modules/qeapkplus
+    ui_print "*******************************"
+    ui_print " QEUI-MIUI官改 APK补全模块 "
+    ui_print "*******************************"
+if [ -d "/data/adb/modules/qeapkplus" ];then
+
+    echo "======================================"
+    echo "✔先前已有补全模块！正在对补全模块进行合并修补..."
+    echo "======================================"
+
+    rm -rf $TMPDIR/qetemp
+    mkdir $TMPDIR/qetemp
+    unzip $ZIPFILE -d $TMPDIR/qetemp
+    cp -r $TMPDIR/qetemp/system $QE
+    echo "修补结束"
+else
+    echo "============================="
+    echo "未检测到补全模块！正在创建新模块..."
+    echo "============================="
+    echo " "
+    echo "正在安装补全模块..."
+    mkdir $QE
+    rm -rf $TMPDIR/qetemp
+    mkdir $TMPDIR/qetemp
+    unzip $ZIPFILE -d $TMPDIR/qetemp
+    cp -r $TMPDIR/qetemp/system $QE
+    cp -r $TMPDIR/qetemp/module.prop $QE
+    
+fi
+    echo " "
+    echo "====================="
+    echo "完成，重启后模块即可生效！"
+    echo "====================="
+
+
+[ -f /data/adb/magisk/util_functions.sh ] || require_new_magisk
+. /data/adb/magisk/util_functions.sh
+[ $MAGISK_VER_CODE -lt 23000 ] && require_new_magisk
+
+#install_module
+exit 0

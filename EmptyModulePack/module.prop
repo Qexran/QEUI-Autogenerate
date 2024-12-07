@@ -1,0 +1,6 @@
+id=qeapkplus
+name=『QEUI』APK补全模块
+version=5.0
+versionCode=1
+author=Qe_xr
+description=此模块用于补全被精简的功能，若补全无效请及时反馈，多次刷入会更新此模块内容，具体更新详情可到/data/adb/modules/qeapkplus查看。

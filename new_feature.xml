@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 这里描述了新的要更改的值 -->
+<device_properties>
+    <!--MIUI11-->
+    <MIUI11>
+        <!--支持智能助理新版小部件功能-->
+        <bool name="support_assistant_component">false</bool>
+    </MIUI11>
+
+    <!--MIUI12-->
+    <MIUI12>
+        <!--支持去痣-->
+        <bool name="support_remove_zhi">false</bool>
+    </MIUI12>
+
+    <!--MIUI13-->
+    <MIUI13>
+
+        <!--支持去痣-->
+        <bool name="support_remove_zhi">false</bool>
+    </MIUI13>
+    <!--MIUI14-->
+    <MIUI14>
+
+        <!--支持去痣-->
+        <bool name="support_remove_zhi">false</bool>
+    </MIUI14>
+</device_properties>
