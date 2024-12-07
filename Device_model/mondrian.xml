@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+这里描述了 红米9 的设备特征
+请使用该手机超过一个月的酷友填写，因为需要你对该手机的了解程度高些
+
+填写要求:
+请根据以下文档注释和设备在[官方ROM]下的实际特征填写 >true< 或 >false<
+    true为真，也就是实际情况与注释相同(设备支持此功能)
+    false为假，也就是实际情况与注释相反(设备不支持此功能)
+
+====================================================================
+例子:    <-支持智能助理新版小部件功能->
+        <bool name="support_assistant_component">true</bool>
+
+        如果我的设备(如红米9)的官方MIUI13不支持使用新版小部件功能
+        则改成false
+        <bool name="support_assistant_component">false</bool>
+====================================================================
+
+不需要考虑诸如: 官方MIUI12没有大文件夹 之类的问题，因为程序会自动判断MIUI版本并根据情况尽可能地适配
+如果你的设备最高版本只有MIUI11、12这样子，那对那些高版本才有的功能(大文件夹、新版小部件)一律填false
+
+只要某个MIUI版本应该有但官方不支持就可以填写false！！！！
+只要某个MIUI版本应该有，官方也有就可以填写true！！！！
+
+不知道的填写 none!!!
+不知道的填写 none!!!
+不知道的填写 none!!!
+不知道的填写 none!!!
+
+不允许填写移植包适配情况！移植包不能代表这个设备！
+
+-->
+
+<device_properties>
+    <!--软件功能-->
+    <normal>
+        <!--支持智能助理新版小部件功能-->
+        <bool name="support_assistant_component">ture</bool>
+        <!--支持最高帧率/码率屏幕录制-->
+        <bool name="support_high_quality_capture">ture</bool>
+        <!--支持时钟沙漏动画-->
+        <bool name="support_high_quality_capture">false</bool>
+        <!--支持传送门超分辨率图片-->
+        <bool name="support_high_quality_extension">false</bool>
+        <!--支持天气完整动画-->
+        <bool name="support_weather_complete_anim">false</bool>
+    </normal>
+
+    <!--相机-->
+    <camera>
+        <!--视频拍摄支持60FPS-->
+        <bool name="support_60_fps">ture</bool>
+        <!--视频拍摄支持120FPS(非120fps设备请填写true)-->
+        <bool name="support_120_fps">false</bool>
+        <!--支持HDR模式-->
+        <bool name="support_hdr">ture</bool>
+        <!--支持AI模式-->
+        <bool name="support_ai_mode">none</bool>
+        <!--支持音源追焦-->
+        <bool name="support_voice_catch">none</bool>
+        <!--支持万物追焦-->
+        <bool name="support_all_item_catch">none</bool>
+        <!--支持RAW-->
+        <bool name="support_raw">nonr</bool>
+        <!--支持LOG-->
+        <bool name="support_log">ture</bool>
+        <!--支持AI水印-->
+        <bool name="support_ai_watermark">false</bool>
+        <!--支持长曝光-->
+        <bool name="support_long_capt">ture</bool>
+        <!--支持魔法分身-->
+        <bool name="support_magic_body">ture</bool>
+        <!--支持化妆镜-->
+        <bool name="support_beauty_mirror">none</bool>
+        <!--支持文档-->
+        <bool name="support_document">ture</bool>
+        <!--支持前后双景-->
+        <bool name="support_before_after_scene">none</bool>
+        <!--支持延时摄影-->
+        <bool name="support_long_long_capt">ture</bool>
+        <!--支持短视频-->
+        <bool name="support_short_video">ture</bool>
+        <!--支持超级月亮-->
+        <bool name="support_super_moon">false</bool>
+        <!--支持全景-->
+        <bool name="support_all_scene">ture</bool>
+        <!--支持超分辨率模式-->
+        <bool name="support_super_pic">false</bool>
+        <!--支持人像-->
+        <bool name="support_person_pic">ture</bool>
+        <!--支持慢动作-->
+        <bool name="support_slow_action">ture</bool>
+        <!--支持Vlog-->
+        <bool name="support_vlog">ture</bool>
+        <!--支持Vlog_Pro-->
+        <bool name="support_vlog_pro">ture</bool>
+        <!--支持男性妆容-->
+        <bool name="support_male_beauty_pic">none</bool>
+        <!--支持拍摄HELF格式-->
+        <bool name="support_helf">none</bool>
+        <!--支持运动抓拍-->
+        <bool name="support_movement_catch">none</bool>
+        <!--支持去痣-->
+        <bool name="support_remove_zhi">false</bool>
+    </camera>
+
+    <!--相册-->
+    <gallery>
+        <!--支持"推荐"栏目-->
+        <bool name="support_recommend_colum">ture</bool>
+        <!--支持魔法换天-->
+        <bool name="support_magic_change_cloud">ture</bool>
+        <!--支持文字烟花-->
+        <bool name="support_firework_text">false</bool>
+        <!--支持魔法抠图-->
+        <bool name="support_magic_pic">false</bool>
+        <!--支持生成PDF-->
+        <bool name="support_generate_pdf">ture</bool>
+        <!--支持提取文字-->
+        <bool name="support_get_text">ture</bool>
+        <!--支持提取表格-->
+        <bool name="support_get_excel">ture</bool>
+        <!--支持超动态显示-->
+        <bool name="support_super_dynamic_display">false</bool>
+    </gallery>
+
+    <!--控制中心/系统界面-->
+    <control_ui>
+        <!--支持新版控制中心/默认使用新版控制中心-->
+        <bool name="support_use_new_control">ture</bool>
+        <!--支持控制中心进出缩放动画-->
+        <bool name="support_control_int_out_anim">ture</bool>
+        <!--支持音量条、通知动态模糊-->
+        <bool name="support_volume_notification_blur">ture</bool>
+        <!--支持控制中心模糊-->
+        <bool name="support_control_blur">ture</bool>
+        <!--支持控制中心的小米妙播-->
+        <bool name="support_milink_in_control">ture</bool>
+        <!--支持新版充电动画(旧版的充电动画是下面有五条线，长得像棒棒糖那样)-->
+        <bool name="support_new_charge_anim">ture</bool>
+        <!--息屏显示支持10秒点击显示(非oled机型请输入true)-->
+        <bool name="support_tap_aod">false</bool>
+    </control_ui>
+
+    <!--系统框架-->
+    <framework>
+        <!--支持小窗(只要能正常向上拖动卡片成小窗就可以)-->
+        <bool name="support_small_window">ture</bool>
+        <!--支持通知小横条下拉(通常是短信和微信之类的应用)-->
+        <bool name="support_slide_bar">ture</bool>
+        <!--支持带壳截图-->
+        <bool name="support_screenshot_with_overlay">ture</bool>
+        <!--支持弹幕通知-->
+        <bool name="support_twinkling_mode">true</bool>
+        <!--支持内存扩展-->
+        <bool name="support_extend_ram">ture</bool>
+        <!--支持触感调节-->
+        <bool name="support_touch_adjust">false</bool>
+        <!--支持屏幕时间管理-->
+        <bool name="support_time_manage">false</bool>
+        <!--支持扬声器清理-->
+        <bool name="support_speaker_clean">ture</bool>
+        <!--支持三项AI大师画质引擎-->
+        <bool name="support_ai_video_quality">ture</bool>
+        <!--支持前置摄像美颜-->
+        <bool name="support_beautify_camera">ture</bool>
+        <!--支持自定义屏幕刷新率(60fps的机型请输入true)-->
+        <bool name="support_custom_fps">false</bool>
+        <!--支持防闪烁模式(非oled机型请输入true)-->
+        <bool name="support_twinkling_mode">false</bool>
+    </framework>
+
+    <!--系统桌面-->
+    <miui_home>
+        <!--支持桌面打开图标和回到桌面的过渡动画-->
+        <bool name="support_home_open_close_anim">ture</bool>
+        <!--支持桌面多任务长按菜单-->
+        <bool name="support_home_long_press_menu">ture</bool>
+        <!--支持平滑动画-->
+        <bool name="support_smooth_anim">ture</bool>
+        <!--支持无字模式-->
+        <bool name="support_no_words_mode">ture</bool>
+        <!--支持大文件夹-->
+        <bool name="support_big_folder">false</bool>
+        <!--支持更改图标大小-->
+        <bool name="support_change_icon_size">ture</bool>
+    </miui_home>
+
+    <!--手机管家-->
+    <security_center>
+        <!--支持全局侧边栏-->
+        <bool name="sc_support_side_apps">ture</bool>
+        <!--视频工具箱支持识别BGM-->
+        <bool name="sc_support_bgm">ture</bool>
+        <!--视频工具箱支持双芯视效-->
+        <bool name="sc_support_double_video">false</bool>
+        <!--视频工具箱支持影像风格-->
+        <bool name="sc_support_video_style">ture</bool>
+        <!--视频工具箱支持实时字幕-->
+        <bool name="sc_support_ai_text">ture</bool>
+        <!--视频工具箱支持特别风格-->
+        <bool name="sc_support_special_style">false</bool>
+        <!--视频工具箱支持极清播放-->
+        <bool name="sc_support_clear_play">ture</bool>
+        <!--视频工具箱支持智能刷新率-->
+        <bool name="sc_support_intell_rate">ture</bool>
+        <!--支持自动连招-->
+        <bool name="sc_support_auto_operate">ture</bool>
+        <!--支持显示电池温度-->
+        <bool name="sc_support_display_battery_temperature">ture</bool>
+        <!--支持智能断充保护和低电疾充功能-->
+        <bool name="sc_support_display_battery_temperature">false</bool>
+        <!--支持模糊定位-->
+        <bool name="sc_support_blur_locate">ture</bool>
+        <!--支持模糊定位-->
+        <bool name="sc_support_blur_locate">ture</bool>
+    </security_center>
+</device_properties>
